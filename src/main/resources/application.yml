@@ -1,0 +1,32 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  http:
+      encoding:
+        enabled: true
+        force: true
+        charset: UTF-8
+  devtools:
+    livereload:
+      enabled: true
+  thymeleaf:
+    cache: false
+  datasource:
+    url: jdbc:mysql://39.108.119.233:3306/springboot?characterEncoding=UTF-8&useSSL=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    connectionProperties: druid.stat.mergeSql=true
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
