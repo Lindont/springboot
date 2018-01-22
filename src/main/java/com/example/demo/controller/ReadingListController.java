@@ -1,15 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.bean.Book;
-import com.example.demo.repository.ReadingListRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-import java.util.List;
 
 /**
  * @Author : HuangHaoXin
@@ -17,9 +8,9 @@ import java.util.List;
  * @Date : Create in 2018-01-01
  */
 @Controller
-@RequestMapping("/")
+//@RequestMapping("/")
 public class ReadingListController {
-    @Autowired
+/*    @Autowired
     ReadingListRepository readingListRepository;
 
     @RequestMapping(value = "/{reader}", method = RequestMethod.GET)
@@ -38,5 +29,5 @@ public class ReadingListController {
         book.setReader(reader);
         readingListRepository.save(book);
         return "redirect:/{reader}";
-    }
+    }*/
 }
