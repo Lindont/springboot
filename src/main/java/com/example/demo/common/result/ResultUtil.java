@@ -84,11 +84,29 @@ public class ResultUtil {
      * @param <T>
      * @return
      */
-    public static <T> Result<T> resultMsg(int code, String msg, T data) {
+    public static <T> Result<T> resultMsg(Integer code, String msg, T data) {
         Result<T> result = new Result<>();
         result.setCode(code);
         result.setMsg(msg);
         result.setData(data);
         return result;
     }
+
+
+    /**
+     * EnumResult
+     *
+     * @param resultEnum
+     * @param data
+     * @param <T>
+     * @return
+     */
+    public static <T> Result<T> resultEnumMsg(ResultEnum resultEnum, T data) {
+        Result<T> result = new Result<>();
+        result.setCode(resultEnum.getCode());
+        result.setMsg(resultEnum.getMsg());
+        result.setData(data);
+        return result;
+    }
+
 }

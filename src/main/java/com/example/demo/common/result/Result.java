@@ -12,7 +12,7 @@ public class Result<T> {
     /**
      * 状态码
      */
-    private int code;
+    private Integer code;
     /**
      * 消息
      */

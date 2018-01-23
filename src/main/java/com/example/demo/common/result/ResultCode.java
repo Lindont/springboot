@@ -6,7 +6,7 @@ package com.example.demo.common.result;
  * @Date : Create in 2018-01-23
  */
 public class ResultCode {
-    public static final int ERROR = -1;
-    public static final int FAILED = 0;
-    public static final int SUCCESS = 1;
+    public static final Integer ERROR = -1;
+    public static final Integer FAILED = 0;
+    public static final Integer SUCCESS = 1;
 }

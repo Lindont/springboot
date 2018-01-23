@@ -21,6 +21,10 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     connectionProperties: druid.stat.mergeSql=true
+    validationQuery: SELECT 1 FROM DUAL
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
   jpa:
     database: MYSQL
     show-sql: true
@@ -32,5 +36,5 @@ spring:
         dialect: org.hibernate.dialect.MySQL5Dialect
 
 myvalue:
-  valone: 123
+  valone: 100
   valtwo: spring-boot
