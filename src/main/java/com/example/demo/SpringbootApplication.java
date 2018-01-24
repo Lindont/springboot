@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
-@MapperScan("com.examle.demo.mapper.*") //扫描mybatis的mapper
+@MapperScan("com.example.demo.mapper")
 public class SpringbootApplication extends WebMvcConfigurerAdapter {
 
     @Override
