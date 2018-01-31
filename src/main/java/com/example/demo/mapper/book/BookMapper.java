@@ -1,7 +1,8 @@
-package com.example.demo.mapper;
+package com.example.demo.mapper.book;
 
 import com.example.demo.bean.Book;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Component;
 
 
 /**
@@ -9,7 +10,7 @@ import org.apache.ibatis.annotations.Select;
  * @Description :
  * @Date : Create in 2018-01-24
  */
-
+@Component
 public interface BookMapper {
     @Select("select * from book where id = #{id}")
     Book selectBook(int id);

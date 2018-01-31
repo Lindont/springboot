@@ -2,6 +2,8 @@ package com.example.demo.service;
 
 import com.example.demo.bean.Book;
 
+import java.util.List;
+
 /**
  * @Author : HuangHaoXin
  * @Description :
@@ -9,4 +11,5 @@ import com.example.demo.bean.Book;
  */
 public interface BookService {
     Book selectBook(int id);
+    List<Book> selectAllBooks();
 }

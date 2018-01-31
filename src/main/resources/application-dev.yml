@@ -35,6 +35,7 @@ spring:
     filters: stat,wall,slf4j
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
+
 myvalue:
   valone: 100
   valtwo: ${spring.datasource.driver-class-name}

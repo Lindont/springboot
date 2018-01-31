@@ -6,6 +6,7 @@ import com.example.demo.common.result.ResultUtil;
 import com.example.demo.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,4 +26,12 @@ public class BookController {
     public Result getBookInfoByid(@PathVariable int id) {
         return ResultUtil.resultEnumMsg(ResultEnum.SUCCESS,bookService.selectBook(id));
     }
+
+
+    @GetMapping("/getallbook")
+    @ResponseBody
+    public Result getAllBooks() {
+        return ResultUtil.resultMsg(00,"success",bookService.selectAllBooks());
+    }
+
 }
