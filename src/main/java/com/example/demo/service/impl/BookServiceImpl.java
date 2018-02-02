@@ -1,6 +1,6 @@
 package com.example.demo.service.impl;
 
-import com.example.demo.bean.Book;
+import com.example.demo.entity.Book;
 import com.example.demo.mapper.book.BookMapper;
 import com.example.demo.mapper.test.TestXmlMapper;
 import com.example.demo.service.BookService;

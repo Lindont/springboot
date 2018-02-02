@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.bean.Girl;
+import com.example.demo.entity.Girl;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;

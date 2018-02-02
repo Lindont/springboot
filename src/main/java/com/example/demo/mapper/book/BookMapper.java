@@ -1,6 +1,6 @@
 package com.example.demo.mapper.book;
 
-import com.example.demo.bean.Book;
+import com.example.demo.entity.Book;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
 

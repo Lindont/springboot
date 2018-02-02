@@ -1,9 +1,8 @@
 package com.example.demo.mapper.test;
 
-import com.example.demo.bean.Book;
+import com.example.demo.entity.Book;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
