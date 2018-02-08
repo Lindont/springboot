@@ -19,12 +19,12 @@ import javax.sql.DataSource;
 /**
  * @Configuration 通过该注解来表明该类是一个Spring的配置，相当于一个xml文件
  * @ComponentScan 扫描包
- * @Bean 通过该注解来表明是一个Bean对象，相当于xml中的<entity>
+ * @Bean 通过该注解来表明是一个Bean对象，相当于xml中的<bean>
  * @PropertySource 加载配置文件
  */
 @Configuration
 @ComponentScan(basePackages = "com.example.demo")
-@PropertySource(value = {"classpath:jdbc.properties", "classpath:redis.properties"}, ignoreResourceNotFound = true, encoding = "UTF-8")
+//@PropertySource(value = {"classpath:jdbc.properties", "classpath:redis.properties"}, ignoreResourceNotFound = true, encoding = "UTF-8")
 public class SpringConfig {
     @Bean
     public ConfigBeanDao getConfigBeanDao() {

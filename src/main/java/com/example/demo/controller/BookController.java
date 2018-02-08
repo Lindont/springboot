@@ -26,12 +26,4 @@ public class BookController {
     public Result getBookInfoByid(@PathVariable int id) {
         return ResultUtil.resultEnumMsg(ResultEnum.SUCCESS,bookService.selectBook(id));
     }
-
-
-    @GetMapping("/getallbook")
-    @ResponseBody
-    public Result getAllBooks() {
-        return ResultUtil.resultMsg(00,"success",bookService.selectAllBooks());
-    }
-
 }

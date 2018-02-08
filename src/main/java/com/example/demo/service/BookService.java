@@ -11,5 +11,4 @@ import java.util.List;
  */
 public interface BookService {
     Book selectBook(int id);
-    List<Book> selectAllBooks();
 }
