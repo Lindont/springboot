@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.example.demo.validator.CustomValida;
 import lombok.Data;
 
 import javax.validation.constraints.Min;
@@ -16,5 +17,7 @@ public class Girl {
 
     @Min(value = 18, message = "未成年女生禁止注册")
     private int age;
+
+    @CustomValida(message = "自定义校验测试")
     private String address;
 }
