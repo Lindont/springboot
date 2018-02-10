@@ -30,6 +30,10 @@ public class MyConfig {
         return configBean;
     }
 
+    @Bean
+    public ConfigBeanDao getConfigBeanDao() {
+        return new ConfigBeanDao();
+    }
 
     @Bean
     public Cat cat() {

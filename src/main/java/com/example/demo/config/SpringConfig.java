@@ -1,14 +1,7 @@
 package com.example.demo.config;
 
-import com.alibaba.druid.pool.DruidDataSource;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.env.Environment;
-
-import javax.sql.DataSource;
 
 /**
  * @Author : HuangHaoXin
@@ -26,8 +19,5 @@ import javax.sql.DataSource;
 @ComponentScan(basePackages = "com.example.demo")
 //@PropertySource(value = {"classpath:jdbc.properties", "classpath:redis.properties"}, ignoreResourceNotFound = true, encoding = "UTF-8")
 public class SpringConfig {
-    @Bean
-    public ConfigBeanDao getConfigBeanDao() {
-        return new ConfigBeanDao();
-    }
+
 }

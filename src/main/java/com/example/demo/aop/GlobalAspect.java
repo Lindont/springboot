@@ -1,6 +1,7 @@
 package com.example.demo.aop;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,6 +10,8 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
+import java.util.Date;
 
 /**
  * @Author : HuangHaoXin
@@ -25,6 +28,7 @@ public class GlobalAspect {
 
     }
 
+    /*
     @Before("doLog()")
     public void beforeDoLog(JoinPoint joinPoint) {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
@@ -46,5 +50,24 @@ public class GlobalAspect {
     @AfterReturning(pointcut = "doLog()", returning = "object")
     public void afterReturnDoLog(JoinPoint joinPoint, Object object) {
         logger.info("返回数据: " + object);
+    }
+    */
+
+    @Around("doLog()")
+    private Object aroundDoLog(ProceedingJoinPoint pjp) throws Throwable {
+        logger.info("开始执行方法: " + pjp.toString());
+
+        long start = new Date().getTime();
+        Object[] args = pjp.getArgs();
+        Arrays.stream(args).forEach( data -> {
+            logger.info("data -> " + data.toString());
+        });
+
+        //开始调用request请求的方法, 并拿到返回值
+        Object value = pjp.proceed();
+        //调用结束
+        logger.info("执行方法结束返回: " + value);
+        logger.info("Aspect: 执行方法耗时 -> " + (new Date().getTime() - start) + "毫秒");
+        return value;
     }
 }
